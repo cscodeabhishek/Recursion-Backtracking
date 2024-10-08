@@ -1,12 +1,19 @@
 // Recursion:
-// Recusrion is when a function calling itself until a base condition is met.
-// function keep callling itself to solve the probem
+// Recursion is when a function calls itself until a base condition is met.
+// The function keeps calling itself to solve the problem.
 
-function printNto1(n){
-    if(n===5){ // here we are setting the base condition so the stack wont get overflow// if you can give base condition compiler print it till -9065 then give error of stackoverFlow
-    return;
+function printNto1(n) {
+    if (n <= 0) { // This base condition stops when n is 0 or negative
+        return;
     }
-    console.log(n);
-    printNto1(n-1);
+    console.log(n); // Print the current value of n
+    printNto1(n - 1); // Recursive call, decreasing n by 1 each time
 }
-printNto1(5);
+
+printNto1(5); // Start from 5 and print down to 1
+// output
+5
+4
+3
+2
+1
