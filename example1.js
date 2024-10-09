@@ -3,7 +3,7 @@
 // The function keeps calling itself to solve the problem.
 
 function printNto1(n) {
-    if (n <= 0) { // This base condition stops when n is 0 or negative
+    if (n === 0) { // This base condition stops when n is 0 or negative
         return;
     }
     console.log(n); // Print the current value of n
