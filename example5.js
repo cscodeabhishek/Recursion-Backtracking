@@ -28,3 +28,49 @@ f(5);
 // 3
 // 4
 // 5
+
+function funct(n){
+    if(n<=1){
+    return ;
+    }
+    funct(n-1);
+    console.log(3*n);
+    funct(n-2);
+    console.log(2*~n);
+}
+funct(4);
+// op 6
+// -6
+// 9
+// -8
+// 12
+// 6
+// -6
+// -10
+
+// reverse array 
+function reversedFunc(array, left=0,right=array.length-1){
+    if(left>=right){
+    return;
+    }
+    // swap logic
+    const temp =array[left];
+    array[left]=array[right];
+    array[right]=temp;
+    reversedFunc(array,left +1, right-1);
+}
+const array= [1,2,3,4,5,4];
+reversedFunc(array);
+console.log(array);
+
+
+function palindromecheck(str,left=0,right=str.length-1){
+    if(left>=right){
+        return true;
+    }
+    if(str[left]!==str[right]){
+        return false;
+    }
+    return palindromecheck(str,left +1, right-1);
+}
+console.log(palindromecheck("abba"));
